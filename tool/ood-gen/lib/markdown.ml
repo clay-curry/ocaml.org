@@ -1,3 +1,36 @@
+(*---------------------------------------------------------------------------
+   TODO: 
+   
+   1. trace Cmarkit's markdown rendering logic to the production rule for:
+
+   ```ocaml
+   $ <arbitrary code example>
+   ```
+   |=>
+   <pre><code><span class="ocaml-keyword-other">$</span><span class="ocaml-source"> ... </code></pre>
+
+  ```ocaml
+   # <arbitrary code example>
+   ```
+   |=>
+   <pre><code><span class="ocaml-keyword-other">#</span><span class="ocaml-source"> ... </code></pre> 
+
+   
+   
+   2. for characters "$" and "#," define a new, semantically meaningful production rule for the Markdown
+   engine to replace the current "ocaml-keyword-other" derivation
+
+   3. for this production rule, define the appropriate CSS properties (user-select: none) and JavaScript
+   API to prevent accidental copy/paste of shell prompts and REPL outputs from the tutorial website
+
+  References:
+  - https://erratique.ch/software/cmarkit/doc/Cmarkit_renderer/index.html#example
+  - http://localhost:8080/exercises
+  - Cmarkit docs
+  - VSCode directory search - keyword: Cmarkit_html; include: ./*; exclude: _build
+  - Cmarkit docs
+  ---------------------------------------------------------------------------*)
+
 open Ocamlorg.Import
 
 module Toc = struct
